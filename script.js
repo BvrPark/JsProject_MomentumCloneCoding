@@ -1,10 +1,14 @@
-const player = {
-    name: "nico",
-    sayHello: function(otherPersonsName) {
-        console.log("hello! " + otherPersonsName + " nice to meet you");
+const calculator = {
+    add: function(a, b){
+        console.log(a+b);
+    },
+    min: function(a, b){
+        console.log(a-b);
+    },
+    mul: function(a, b){
+        console.log(a*b);
+    },
+    div: function(a, b){
+        console.log(a/b);
     },
 };
-
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("nico");
