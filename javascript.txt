@@ -1,0 +1,36 @@
+console.log() => 콘솔에 출력해주는 명령어
+variable = const, let
+const : 상수설정
+let : 일반적인 변수들
+" " : 문자를 표현할때
+null : 변수에 아무런 값도 존재하지 않는다. = 절대 자연적으로 탄생 X
+
+object
+ex) const variable{
+	name: ~~~,
+	points: ~~~,
+	~~~	   ,
+};
+variable.name = ~
+
+//function
+function sayHello(nameOfPerson,age){
+    console.log("Hello my name is " + nameOfPerson
+                +"and I'm " + age);
+}
+sayHello("nico", 10);
+sayHello("dal", 23);
+sayHello("lynn", 21);
+
+const player = {
+    name: "nico",
+    sayHello: function(otherPersonsName) {
+        console.log("hello! " + otherPersonsName + " nice to meet you");
+    },
+};
+
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("nico");
+
+Recap
