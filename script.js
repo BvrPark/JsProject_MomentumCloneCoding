@@ -17,12 +17,7 @@ function onLoginSubmit(event){
     //데이터베이스와 같은 기능
     //""안은 key값 ,뒤에는 value값
     
-    greeting.innerText = `Hello ${username}`;
-    //string과 변수를 합치는 법
-    //'가 아닌 `다 헷갈리지 않도록!!!
-
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-
+    paintGreetrings(savedUsername);
 }
 
 function paintGreetrings(username){
