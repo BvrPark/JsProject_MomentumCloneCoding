@@ -34,5 +34,5 @@ if(savedUsername === null){
 } else{
     //show the greetings
     paintGreetrings(savedUsername);
-  
+   
 }
