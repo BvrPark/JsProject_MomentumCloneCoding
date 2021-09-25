@@ -2,6 +2,14 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+const toDos = [];
+
+function saveToDo(){
+    localStorage.setItem("todos", JSON.stringify(toDos));
+    //setItem("key", value)형태로 데이터 저장
+    //JSON.stringify() 어떤 object든 array든 무조건 string의 형태로 바꿔주는 것
+}
+
 function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
@@ -24,7 +32,9 @@ function handleToDoSubmit(event){
     event.preventDefault();     //submit하고 새로고침 중지
     const newToDo = toDoInput.value;
     toDoInput.value = "";
+    toDos.push(newToDo);
     paintToDo(newToDo);
+    saveToDo();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
