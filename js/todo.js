@@ -2,10 +2,12 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY = "todos";
+
 const toDos = [];
 
 function saveToDo(){
-    localStorage.setItem("todos", JSON.stringify(toDos));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
     //setItem("key", value)형태로 데이터 저장
     //JSON.stringify() 어떤 object든 array든 무조건 string의 형태로 바꿔주는 것
 }
@@ -38,3 +40,10 @@ function handleToDoSubmit(event){
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if(savedToDos !== null){
+    const parsedToDos = JSON.parse(savedToDos); //parse는 array의 형태로 변형시켜준다.
+    parsedToDos.forEach();  //forEach는 array의 각 item에 대해 function을 실행하게 해준다.
+}
